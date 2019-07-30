@@ -58,9 +58,17 @@ class LoginViewController: UIViewController ,UITextFieldDelegate {
     }
     
     @objc func labelTapped(_ sender:UITapGestureRecognizer){
-        let url = URL(string: "") ?? URL(fileURLWithPath: "")
+        let url = URL(string: "https://raw.githubusercontent.com/Mosquito1123/Xllent-Chat/master/PrivacyPolicyAndPersonalAgreement") ?? URL(fileURLWithPath: "")
         let vc = SFSafariViewController(url: url)
-        self.show(vc, sender: nil)
+        vc.delegate = self
+        if #available(iOS 11.0, *) {
+            vc.dismissButtonStyle = .cancel
+        } else {
+            // Fallback on earlier versions
+        }
+        self.present(vc, animated: true) {
+            
+        }
         
     }
     
@@ -248,4 +256,9 @@ class LoginViewController: UIViewController ,UITextFieldDelegate {
         return false
     }
     
+}
+extension LoginViewController:SFSafariViewControllerDelegate{
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+       controller.dismiss(animated: true, completion: nil)
+    }
 }
