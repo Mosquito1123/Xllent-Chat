@@ -67,8 +67,8 @@ class CallingViewController: UIViewController {
         
         // HandleCameraSession
         captureSession.sessionPreset = AVCaptureSession.Preset.high
-        if let devices = AVCaptureDevice.devices() as? [AVCaptureDevice]
-        {
+       let devices = AVCaptureDevice.devices()
+        
             for device in devices
             {
                 if (device.hasMediaType(AVMediaType.video))
@@ -83,7 +83,7 @@ class CallingViewController: UIViewController {
                     }
                 }
             }
-        }
+        
     }
     
     

@@ -252,7 +252,10 @@ class MoreSettingsViewController: UIViewController,UITableViewDelegate,UITableVi
         let alert = UIAlertController(title: NSLocalizedString("Logout", comment: ""), message: NSLocalizedString("Are you sure you want to Logout?", comment: ""), preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style: .default, handler: { action in
             switch action.style{
-            case .default:
+            case .cancel: break
+                
+            case .destructive: break
+            default:
                 
                 CometChat.logout(onSuccess: { (sucess) in
                     CometChat.stopServices()
@@ -264,9 +267,8 @@ class MoreSettingsViewController: UIViewController,UITableViewDelegate,UITableVi
                      DispatchQueue.main.async(execute: { self.view.makeToast(NSLocalizedString("Fail to logout at this moment.", comment: ""))})
                 })
                 
-            case .cancel: break
-                
-            case .destructive: break
+            
+            
             }}))
         alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel",comment: ""), style: UIAlertAction.Style.cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)

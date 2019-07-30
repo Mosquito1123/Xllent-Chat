@@ -40,8 +40,8 @@ class startUpViewController: UIViewController,CCBottomSlideDelegate, UITextField
     func handleStartUpVCApperance() {
         self.view.backgroundColor = UIColor.init(hexFromString: UIAppearanceColor.BACKGROUND_COLOR)
         self.cometChatLogo.tintColor = UIColor.red
-        cometChatLogo.image = cometChatLogo.image!.withRenderingMode(.alwaysTemplate)
-        cometChatLogo.tintColor = UIColor.init(hexFromString: UIAppearanceColor.LOGO_TINT_COLOR)
+//        cometChatLogo.image = cometChatLogo.image!.withRenderingMode(.alwaysTemplate)
+//        cometChatLogo.tintColor = UIColor.init(hexFromString: UIAppearanceColor.LOGO_TINT_COLOR)
     }
     
     

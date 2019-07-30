@@ -7,7 +7,7 @@
 //
 import UIKit
 import CometChatPro
-
+import SafariServices
 
 class LoginViewController: UIViewController ,UITextFieldDelegate {
     
@@ -26,6 +26,7 @@ class LoginViewController: UIViewController ,UITextFieldDelegate {
     @IBOutlet weak var superHero4View: UIView!
     @IBOutlet weak var activityIndicator: CCActivityIndicator!
     
+    @IBOutlet weak var agreementLabel: UILabel!
     
     //Variable Declarations
     var cometchat:CometChat!
@@ -49,13 +50,28 @@ class LoginViewController: UIViewController ,UITextFieldDelegate {
         //Assigning Delegates
         userName.delegate = self
         password.delegate = self
+        self.agreementLabel.text = "Read and agree to the Privacy Policy and User Agreement."
+        let tap = UITapGestureRecognizer(target: self, action: #selector(labelTapped(_:)))
+        self.agreementLabel.isUserInteractionEnabled = true
+        self.agreementLabel.addGestureRecognizer(tap)
+        self.agreementLabel.textColor = UIColor.init(hexFromString: UIAppearanceColor.BACKGROUND_COLOR)
     }
     
+    @objc func labelTapped(_ sender:UITapGestureRecognizer){
+        let url = URL(string: "") ?? URL(fileURLWithPath: "")
+        let vc = SFSafariViewController(url: url)
+        self.show(vc, sender: nil)
+        
+    }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        super.viewWillAppear(animated)
         //Funtion Calling
         self.handleTopViewDistance()
+        self.superHero1View.isHidden = true
+        self.superHero2View.isHidden = true
+        self.superHero3View.isHidden = true
+        self.superHero4View.isHidden = true
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {

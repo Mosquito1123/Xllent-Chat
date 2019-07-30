@@ -1,5 +1,7 @@
 
 target 'CometChatPro-swift-sampleApp' do
-  pod 'CometChatPro', '~> 1.8.3'
-  pod 'SDWebImage', '~> 4.0'
+  use_frameworks!
+
+  pod 'CometChatPro'
+  pod 'SDWebImage'
 end

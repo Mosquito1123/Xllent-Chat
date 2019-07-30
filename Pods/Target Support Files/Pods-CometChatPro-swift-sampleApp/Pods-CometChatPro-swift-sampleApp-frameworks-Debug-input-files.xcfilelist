@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-CometChatPro-swift-sampleApp/Pods-CometChatPro-swift-sampleApp-frameworks.sh
+${PODS_ROOT}/CometChatPro/CometChatPro.framework
+${PODS_ROOT}/CometChatPro/Vendors/JitsiMeet.framework
+${PODS_ROOT}/CometChatPro/Vendors/WebRTC.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework

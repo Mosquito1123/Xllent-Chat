@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cometchat_white" translatesAutoresizingMaskIntoConstraints="NO" id="tYk-RO-mg9">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="comment" translatesAutoresizingMaskIntoConstraints="NO" id="tYk-RO-mg9">
                                 <rect key="frame" x="-20" y="166" width="360" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="360" id="FqT-kw-DBP"/>
@@ -34,7 +34,7 @@
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.64165550470352173" green="0.09339972585439682" blue="0.63819223642349243" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="tYk-RO-mg9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="102" id="91F-bl-2Up"/>
                             <constraint firstItem="tYk-RO-mg9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z6i-EW-rpY"/>
@@ -124,7 +124,7 @@
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfm-ti-LUd">
                                 <rect key="frame" x="25" y="105" width="364" height="0.0"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-lock-52" translatesAutoresizingMaskIntoConstraints="NO" id="ke5-Zl-VAJ">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ke5-Zl-VAJ">
                                         <rect key="frame" x="20" y="-11" width="22" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="22" id="62w-j3-5fZ"/>
@@ -227,7 +227,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOz-zm-U80">
                                         <rect key="frame" x="0.0" y="0.0" width="364" height="60"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Login">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -659,6 +659,7 @@
                         <outlet property="PasswordView" destination="cfm-ti-LUd" id="qUF-WQ-sxi"/>
                         <outlet property="UserNameView" destination="J0y-Vr-38u" id="1Xc-pg-WoU"/>
                         <outlet property="activityIndicator" destination="ZRd-tJ-oWh" id="XBt-Ld-BhO"/>
+                        <outlet property="agreementLabel" destination="HpW-3H-lWw" id="8tQ-rV-gqo"/>
                         <outlet property="bottomViewTop" destination="Ns2-fC-x4R" id="NXg-tP-I8w"/>
                         <outlet property="bottomViewUpArrow" destination="5bk-b1-C3i" id="UIa-kB-Gt4"/>
                         <outlet property="loginButton" destination="gOz-zm-U80" id="QNv-M7-pQd"/>
@@ -900,7 +901,7 @@
                         <viewLayoutGuide key="safeArea" id="z9k-Cu-obx"/>
                     </view>
                     <navigationItem key="navigationItem" id="Kte-23-x6O">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="ZM4-9i-MIo">
+                        <barButtonItem key="leftBarButtonItem" id="ZM4-9i-MIo">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7Ha-im-5eQ">
                                 <rect key="frame" x="16" y="6" width="40" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -909,7 +910,7 @@
                                 </connections>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="Rwb-S3-ygP">
+                        <barButtonItem key="rightBarButtonItem" id="Rwb-S3-ygP">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Nyr-i0-PEt">
                                 <rect key="frame" x="264" y="6" width="40" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1407,16 +1408,15 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0s-qw-GSA">
-                                                <rect key="frame" x="53" y="10" width="242" height="40"/>
+                                                <rect key="frame" x="53" y="10" width="174" height="40"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="242" id="ats-xm-L3p"/>
                                                     <constraint firstAttribute="height" constant="40" id="il9-Bb-E5e"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="downArrow" translatesAutoresizingMaskIntoConstraints="NO" id="pg4-qZ-nwN">
-                                                <rect key="frame" x="295" y="18" width="24" height="24"/>
+                                                <rect key="frame" x="227" y="18" width="53" height="24"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2176,7 +2176,7 @@
                         <viewLayoutGuide key="safeArea" id="Una-xe-ZF8"/>
                     </view>
                     <navigationItem key="navigationItem" id="xDf-Zl-7Pl">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="PJd-fR-ImB">
+                        <barButtonItem key="leftBarButtonItem" id="PJd-fR-ImB">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vMK-db-SHF">
                                 <rect key="frame" x="16" y="6" width="40" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2186,7 +2186,7 @@
                             </button>
                         </barButtonItem>
                         <rightBarButtonItems>
-                            <barButtonItem style="plain" id="SYy-gI-Vhv">
+                            <barButtonItem id="SYy-gI-Vhv">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ORf-yd-4rN">
                                     <rect key="frame" x="264" y="6" width="40" height="32"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2195,7 +2195,7 @@
                                     </connections>
                                 </button>
                             </barButtonItem>
-                            <barButtonItem style="plain" id="niA-1V-WlI">
+                            <barButtonItem id="niA-1V-WlI">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="z8q-hS-68v">
                                     <rect key="frame" x="216" y="6" width="40" height="32"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2406,7 +2406,7 @@
                         <viewLayoutGuide key="safeArea" id="zfd-eY-hw8"/>
                     </view>
                     <navigationItem key="navigationItem" id="X1B-bP-Yvw">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="Fpp-iz-Vza">
+                        <barButtonItem key="leftBarButtonItem" id="Fpp-iz-Vza">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="R2q-dz-7Y7">
                                 <rect key="frame" x="16" y="6" width="40" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2416,7 +2416,7 @@
                             </button>
                         </barButtonItem>
                         <rightBarButtonItems>
-                            <barButtonItem style="plain" id="P93-aC-nGk">
+                            <barButtonItem id="P93-aC-nGk">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hUE-pR-GB3">
                                     <rect key="frame" x="264" y="6" width="40" height="32"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2425,7 +2425,7 @@
                                     </connections>
                                 </button>
                             </barButtonItem>
-                            <barButtonItem style="plain" id="5Rq-ll-nF6">
+                            <barButtonItem id="5Rq-ll-nF6">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="k0V-Qu-bZc">
                                     <rect key="frame" x="216" y="6" width="40" height="32"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2567,13 +2567,12 @@
         <image name="callaudio_reject" width="75" height="75"/>
         <image name="callaudio_speaker" width="71" height="71"/>
         <image name="captainamerica" width="300" height="300"/>
-        <image name="cometchat_white" width="360" height="439"/>
+        <image name="comment" width="256" height="256"/>
         <image name="default_user" width="612" height="612"/>
         <image name="default_user_icon" width="280" height="280"/>
         <image name="downArrow" width="24" height="24"/>
         <image name="ic_person" width="14" height="14"/>
         <image name="icons8-eye-96" width="21" height="15"/>
-        <image name="icons8-lock-52" width="15" height="17"/>
         <image name="imageView:2M8-T4-WXU:image" width="16" height="16"/>
         <image name="imageView:BOd-0Z-YdN:image" width="16" height="16"/>
         <image name="ironman" width="300" height="300"/>
@@ -2585,5 +2584,5 @@
         <image name="video_callokg." width="16" height="16"/>
         <image name="wolverine" width="300" height="300"/>
     </resources>
-    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+    <color key="tintColor" red="0.61394816637039185" green="0.087773643434047699" blue="0.61142939329147339" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

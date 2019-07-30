@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             break
         case .PersianBlue:
             
-            application.statusBarStyle = .lightContent
+//            application.statusBarStyle = .lightContent
             UINavigationBar.appearance().isTranslucent = false
             UINavigationBar.appearance().backgroundColor = .clear
             

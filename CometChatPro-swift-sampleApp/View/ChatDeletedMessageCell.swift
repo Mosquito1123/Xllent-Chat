@@ -57,7 +57,9 @@ class ChatDeletedMessageCell: UITableViewCell {
                  messageLabel.text = "⚠️  This file was deleted."
             case .custom: break
                 
-            @unknown default: break
+            case .groupMember:
+                break
+            default: break
                 
             }
             

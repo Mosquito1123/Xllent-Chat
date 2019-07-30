@@ -208,7 +208,7 @@ class BlockedUsersVC: UITableViewController {
                     }
                    
                 }, onError: { (error) in
-                    print("unbanGroupMember error \(error?.errorDescription)")
+                    print("unbanGroupMember error \(String(describing: error?.errorDescription))")
                 })
             }
             let cancelAction: UIAlertAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel) { action -> Void in
